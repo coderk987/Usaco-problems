@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> apples;
+vector<long long> apples;
 int N;
 int best=100000;
 
-int apple_div(int i, int g1, int g2){
+long long apple_div(int i, long long g1, long long g2){
     if(i==N) return abs(g1-g2);
     return min(apple_div(i+1, g1+apples[i], g2), apple_div(i+1,g1,g2+apples[i]));
 }
