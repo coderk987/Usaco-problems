@@ -2,6 +2,7 @@
 using namespace std;
 
 set<string> perms;
+int ctr=0;
 
 void create(string s, string cur,vector<int> done){
     if(cur.size()==s.size()){
@@ -22,6 +23,7 @@ int main() {
     cin>>s;
     vector<int> done(s.size(), 0);
     create(s, "", done);
+    cout<<perms.size()<<endl;
     for(auto i:perms){
         cout<<i<<endl;
     }
